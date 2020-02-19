@@ -1,12 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: 'manroperegular', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: white;
-    background-color: #000000;
+    background-color: #0A0A0A;
+    overflow-x: hidden;
 }
 
 
@@ -16,7 +22,9 @@ header {
     max-width: 100%;
     grid-area: header;
     z-index: -1;
-    background-color: black;
+
+
+
 
 }
 
@@ -24,14 +32,20 @@ header img {
     margin: auto;
     display: flex;
     width: 70%;
-    opacity: 0.7;
+
+
 
 }
 
 
 
+li {
+    list-style: none;
+}
+
+
 .topnav {
-    background-color: #000000;
+    background-color: #1C1C1C;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -52,6 +66,10 @@ header img {
     padding: 15px 30px;
     text-decoration: none;
     font-size: 20px;
+}
+
+.title {
+    font-weight: 700;
 }
 
 .topnav a:hover {
@@ -85,8 +103,8 @@ main {
     grid-template-areas:
         "title title title title title title"
         "main2 main2 main2 main2 aside aside"
-        "main2 main2 main2 main2 aside aside";
-    background-color: #000000;
+        "main2 main2 main2 main2 aside aside"
+       ;
     justify-content: center;
 
     padding-bottom: 8%;
@@ -102,13 +120,31 @@ main {
     grid-area: main2;
     padding-top: 20px;
     line-height: 1.2;
-    background-color: #000000;
+
 
 }
 
 .maincontent {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.reviews-container {
+    margin-top: 3rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+
+}
+
+.review {
+    padding: 1rem;
 }
 
 .maincontent > article {
@@ -116,6 +152,16 @@ main {
     margin: 0.5rem;
     border: 1px solid white;
 }
+
+.maincontent article:first-child {
+    width: 90%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
+}
+
 .main img {
     display: flex;
     max-width: 100%;
@@ -125,6 +171,7 @@ main {
 }
 
 aside {
+    display: none;
     grid-area: aside;
     background-color: #000000;
     z-index: 2;
@@ -136,13 +183,11 @@ aside {
 .sidebar {
     font-size: 20px;
     line-height: 1.5;
-    font-family: 'manropelight';
     padding-bottom: 50px;
     margin: auto;
 }
 
 h2 {
-    font-family: 'manropesemibold';
     text-align: center;
     padding-top: 45px;
     padding-bottom: 20px;
@@ -156,21 +201,36 @@ h2 {
 }
 
 .side {
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(255, 255, 255, 0.4);
     margin: 10px;
     padding: 15%;
     background-color: #000000;
 }
 
 h1 {
-    font-size: 55px;
+    font-size: 3rem;
+    color: #C72425;
     text-align: center;
-    font-family: 'manropelight', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     line-height: 1;
-    margin-top: 45px;
+    margin-top: 2rem;
     margin-bottom: 20px;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+
+p {
+    font-weight: 700;
+}
+
+p span {
+    font-weight: 400;
 }
 
 .imgcircle {
@@ -201,6 +261,23 @@ aside a {
     margin: auto;
 }
 
+.footer {
+    background-color: #1C1C1C;
+    display: grid;
+    width: 100vw;
+    padding: 1rem;
+
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: auto;
+}
+
+.column {
+    padding: 1rem;
+}
 @media only screen and (min-width:1400px) {
     body {
         display: grid;
@@ -208,7 +285,8 @@ aside a {
         grid-template-areas:
             "header header header header header"
             "main main main main main"
-            "main main main main main";
+            "main main main main main"
+            ;
     }
 
     aside {
@@ -216,6 +294,7 @@ aside a {
     }
 }
 
+/*
 
 @media only screen and (max-width:1400px) and (min-width:700px) {
     body {
@@ -247,10 +326,12 @@ aside a {
     }
 
 
+*/
 
 
 
-@media screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
+    /*
 
     body {
         display: grid;
@@ -261,6 +342,7 @@ aside a {
             "main main main main"
             "aside aside aside aside";
     }
+*/
 
 
 
@@ -305,6 +387,7 @@ main {
     margin-top: 0;
 }
 
+/*
 @media screen and (max-width: 500px) {
 
     body {
@@ -342,3 +425,4 @@ main {
 
 
 }
+*/
