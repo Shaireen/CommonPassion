@@ -144,7 +144,7 @@ main {
 }
 
 .review {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .maincontent > article {
@@ -233,16 +233,12 @@ p span {
     font-weight: 400;
 }
 
-.imgcircle {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    border-radius: 50%;
-    max-width: 100%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
+.content {
+    padding: 1rem 2rem 0 2rem;
+    display: none;
+  overflow: hidden;
 
+    width: 80%;
 }
 
 .vector {
