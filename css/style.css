@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
 /* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 
 * {
@@ -211,7 +211,7 @@ h1 {
     font-size: 3rem;
     color: #bb9a46;
     text-align: center;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Staatliches', sans-serif;
     line-height: 1;
     margin-top: 2rem;
     margin-bottom: 20px;
@@ -219,7 +219,7 @@ h1 {
 }
 
 h3 {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Staatliches', sans-serif;
     font-weight: 700;
     text-align: center;
     font-size: 1.7rem;
