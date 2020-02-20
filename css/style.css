@@ -92,6 +92,7 @@ aside a:hover {
 
 .topnav a.active {
     text-decoration: underline;
+    text-decoration-color: #e3331e;
 }
 
 main {
@@ -134,17 +135,23 @@ main {
     padding: 0.5rem;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
+
 }
 
+.reviews-container > h3 {
+    font-size: 2.5rem;
+    margin: 1.8rem;
+}
 .reviews {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
 
+
 }
 
 .review {
-    padding: 1rem;
+    padding: 1rem 2rem 2rem 2rem;
 }
 
 .maincontent > article {
@@ -226,6 +233,57 @@ h3 {
     color: #bb9a46;
 }
 
+button {
+   color: black; /* button text color */
+    outline: none;
+    background: transparent;
+    text-transform: uppercase;
+    font-family: "Staatliches", sans-serif;
+    font-size: 1.4rem;
+    border: none;
+    padding: 1rem 1.5rem;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: all .5s;
+
+}
+
+
+button:before, button:after {
+     content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #e3331e;
+    z-index: -1;
+    transform: translate3D(0,-100%,0);
+    transition: all .5s;
+}
+button:before{
+    background: #bb9a46;
+    z-index: -2;
+    transform: translate3D(0,0,0);
+}
+
+button:hover:after {
+    transform: translate3D(0, 0, 0);
+    transition: all .5s;
+}
+
+.slide:after {
+    top: 0;
+    z-index: -1;
+    transform: translate3D(-101%, 0, 0);
+}
+
+.slide:hover:after {
+    transform: translate3D(0, 0, 0);
+    transition: all .5s;
+}
 
 p {
     font-weight: 700;
