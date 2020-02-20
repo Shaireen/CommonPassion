@@ -38,7 +38,7 @@ header img {
 }
 
 .mySlides {
-  display: none;
+    display: none;
     margin-top: 50px;
     opacity: 0.8;
 }
@@ -109,9 +109,9 @@ main {
         "title title title title title title"
         "main2 main2 main2 main2 aside aside"
         "main2 main2 main2 main2 aside aside"
-       ;
+    ;
     justify-content: center;
-
+    justify-items: center;
     padding-bottom: 8%;
     font-size: 18px;
 
@@ -131,7 +131,14 @@ main {
 
 .maincontent {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+    justify-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
+    padding: 1rem;
 }
 
 .reviews-container {
@@ -139,6 +146,79 @@ main {
     padding: 0.5rem;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
+}
+
+.genres {
+    margin-top: 6rem;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    justify-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 3rem;
+
+}
+
+
+button {
+   color: black; /* button text color */
+    outline: none;
+    background: transparent;
+    text-transform: uppercase;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    padding: 1.5rem 2rem;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+
+button:before, button:after {
+     content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #C72425;
+    z-index: -1;
+    transform: translate3D(0,-100%,0);
+    transition: all .5s;
+}
+button:before{
+    background: white;
+    z-index: -2;
+    transform: translate3D(0,0,0);
+}
+
+button:hover:after {
+    transform: translate3D(0, 0, 0);
+    transition: all .5s;
+}
+
+.slide:after {
+    top: 0;
+    z-index: -1;
+    transform: translate3D(-101%, 0, 0);
+}
+
+.slide:hover:after {
+    transform: translate3D(0, 0, 0);
+    transition: all .5s;
+}
+
+.aboutus {
+    width: 60%;
+    padding: 2rem;
+
+
 }
 
 .reviews {
@@ -152,7 +232,7 @@ main {
     padding: 1rem;
 }
 
-.maincontent > article {
+/*.maincontent > article {
     padding: 2rem;
     margin: 0.5rem;
     border: 1px solid white;
@@ -165,7 +245,7 @@ main {
     color: white;
     border: none;
     box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
-}
+}*/
 
 .main img {
     display: flex;
@@ -283,6 +363,7 @@ aside a {
 .column {
     padding: 1rem;
 }
+
 /*@media only screen and (min-width:1400px) {
     body {
         display: grid;
