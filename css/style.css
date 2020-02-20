@@ -37,6 +37,11 @@ header img {
 
 }
 
+.mySlides {
+  display: none;
+    margin-top: 50px;
+    opacity: 0.8;
+}
 
 
 li {
