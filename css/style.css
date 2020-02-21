@@ -216,6 +216,23 @@ button:hover:after {
     transition: all .5s;
 }
 
+
+.bottom-left {
+  font-family: "Staatliches", sans-serif;
+  font-size: 7.5vw;
+  color: #ffffff;
+
+  position: absolute;
+  bottom: 12%;
+  left: 2%;
+   text-shadow:
+       3px 3px 20px #000,
+     -1px -1px 10px #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+
+}
 .aboutus {
     width: 60%;
     padding: 2rem;
