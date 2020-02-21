@@ -68,7 +68,7 @@ li {
 .topnav a {
     color: white;
     text-align: center;
-    padding: 15px 30px;
+    padding: 25px 30px;
     text-decoration: none;
     font-size: 20px;
 }
@@ -99,6 +99,7 @@ aside a:hover {
 .topnav a.active {
     text-decoration: underline;
     text-decoration-color: #e3331e;
+     text-underline-position: under;
 }
 
 main {
@@ -165,7 +166,7 @@ main {
 }
 
 
-button {
+.anim {
    color: black; /* button text color */
     outline: none;
     background: transparent;
@@ -181,7 +182,7 @@ button {
 }
 
 
-button:before, button:after {
+.anim:before, .anim:after {
      content: '';
     position: absolute;
     left: 0;
@@ -194,13 +195,13 @@ button:before, button:after {
     transform: translate3D(0,-100%,0);
     transition: all .5s;
 }
-button:before{
+.anim:before{
     background: #bb9a46;
     z-index: -2;
     transform: translate3D(0,0,0);
 }
 
-button:hover:after {
+.anim:hover:after {
     transform: translate3D(0, 0, 0);
     transition: all .5s;
 }
@@ -218,13 +219,15 @@ button:hover:after {
 
 
 .bottom-left {
-  font-family: "Staatliches", sans-serif;
-  font-size: 7.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
+    width: 30%;
+    line-height: 1.2;
   color: #ffffff;
 
   position: absolute;
-  bottom: 12%;
-  left: 2%;
+  bottom: 40%;
+  left: 7%;
    text-shadow:
        3px 3px 20px #000,
      -1px -1px 10px #000,
@@ -232,6 +235,41 @@ button:hover:after {
       -1px 1px 0 #000,
        1px 1px 0 #000;
 
+}
+
+.top {
+
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border: 1px white solid;
+    font-family: "Staatliches", sans-serif;
+    font-size: 2rem;
+    margin: 2rem 0 0 18rem;
+    color: white;
+    background: transparent;
+    overflow: hidden;
+    transition: all .5s;
+    position: relative;
+
+}
+
+.top:after, .top:before {
+     content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #bb9a46;
+    z-index: -1;
+    transform: translate3D(-100%,0,0);
+    transition: all .5s;
+}
+
+.top:hover:after {
+    transform: translate3D(0, 0, 0);
+    transition: all .5s;
 }
 .aboutus {
     width: 60%;
