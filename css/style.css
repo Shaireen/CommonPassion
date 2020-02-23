@@ -18,16 +18,17 @@ body {
 
 header {
 
-    display: flex;
-    max-width: 100%;
+    /*display: flex;
+    max-width: 100%;*/
     grid-area: header;
     z-index: -1;
 
 
 
 
-}
 
+}
+/*
 header img {
     margin: auto;
     display: flex;
@@ -35,14 +36,19 @@ header img {
 
 
 
-}
+}*/
 
 .mySlides {
     display: none;
     margin-top: 50px;
-    opacity: 0.8;
+    position: relative;
+
+
 }
 
+.mySlides img {
+      width: 100%;
+}
 
 li {
     list-style: none;
@@ -175,6 +181,7 @@ main {
     font-size: 1.7rem;
     border: none;
     padding: 1.5rem 2rem;
+    margin: 2rem;
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -221,13 +228,13 @@ main {
 .bottom-left {
   font-family: "Montserrat", sans-serif;
   font-size: 2vw;
-    width: 30%;
     line-height: 1.2;
   color: #ffffff;
 
   position: absolute;
-  bottom: 40%;
-  left: 7%;
+  bottom: 35%;
+  left: 5%;
+
    text-shadow:
        3px 3px 20px #000,
      -1px -1px 10px #000,
@@ -237,6 +244,9 @@ main {
 
 }
 
+.textwidth {
+      width: 40%;
+}
 .top {
 
     display: inline-block;
@@ -253,7 +263,12 @@ main {
 
 }
 
-.top:after, .top:before {
+.top:hover {
+   box-shadow: 0px 0px 12px #e3331e;
+   text-shadow: 0px 0px 12px #bb9a46;
+}
+
+/*.top:after, .top:before {
      content: '';
     position: absolute;
     left: 0;
@@ -270,7 +285,7 @@ main {
 .top:hover:after {
     transform: translate3D(0, 0, 0);
     transition: all .5s;
-}
+}*/
 .aboutus {
     width: 60%;
     padding: 2rem;
@@ -422,6 +437,10 @@ aside a {
     padding: 1rem;
 }
 
+.mobimg {
+    display: none;
+}
+
 /*@media only screen and (min-width:1400px) {
     body {
         display: grid;
@@ -438,7 +457,19 @@ aside a {
     }
 }*/
 
+
+@media only screen and (max-width: 1050px) and (min-width: 700px) {
+
+
+
+    .mySlides img {
+        height: 600px;
+        width: auto;
+    }
+}
 /*
+
+
 
 @media only screen and (max-width:1400px) and (min-width:700px) {
     body {

@@ -10,7 +10,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
 
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex-1].style.display = "inline-block";
 
   setTimeout(showSlides, 4000);
 }
