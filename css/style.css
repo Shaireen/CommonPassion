@@ -44,10 +44,13 @@ header img {
     position: relative;
 
 
+
 }
 
 .mySlides img {
-      width: 100%;
+    width: 100vw; /* image box size as % of container, see step 1 */
+    height: 80vh;
+    object-fit: cover;
 }
 
 li {
@@ -227,7 +230,7 @@ main {
 
 .bottom-left {
   font-family: "Montserrat", sans-serif;
-  font-size: 2vw;
+  font-size: 2.2rem;
     line-height: 1.2;
   color: #ffffff;
 
@@ -245,7 +248,8 @@ main {
 }
 
 .textwidth {
-      width: 40%;
+      text-overflow: ellipsis;
+    max-width: 20ch;
 }
 .top {
 
@@ -264,7 +268,7 @@ main {
 }
 
 .top:hover {
-   box-shadow: 0px 0px 12px #e3331e;
+   box-shadow: 0px 0px 20px 10px #e3331e;
    text-shadow: 0px 0px 12px #bb9a46;
 }
 
@@ -458,7 +462,7 @@ aside a {
 }*/
 
 
-@media only screen and (max-width: 1050px) and (min-width: 700px) {
+/*@media only screen and (max-width: 1050px) and (min-width: 700px) {
 
 
 
@@ -466,7 +470,7 @@ aside a {
         height: 600px;
         width: auto;
     }
-}
+}*/
 /*
 
 
@@ -519,7 +523,19 @@ aside a {
     }
 */
 
+    .bottom-left {
+        font-size: 2rem;
+        bottom: 30%;
+    }
 
+
+    .top {
+
+    font-size: 2rem;
+    margin: 2rem 0 0 13rem;
+
+
+}
 
     .topnav {
         width: 100%;
@@ -562,42 +578,55 @@ main {
     margin-top: 0;
 }
 
-/*
+
 @media screen and (max-width: 500px) {
 
-    body {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "header header header header"
-            "main main main main"
-            "main main main main"
-            "aside aside aside aside";
+  .bottom-left {
+        font-size: 1.5rem;
+        bottom: 30%;
     }
 
 
+    .top {
 
-    h1 {
-        font-size: 38px;
-    }
-
-
-    .main {
-        width: 18em;
-    }
-
-    .sidebar,
-    aside a {
-        font-size: 17px;
-    }
-
-
-
-    main {
-        margin-bottom: 0;
-
-    }
+    font-size: 1.7rem;
+    margin: 2rem 0 0 9rem;
 
 
 }
-*/
+
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .bottom-left {
+        font-size: 1.5rem;
+        bottom: 20%;
+      left: 10%;
+    }
+
+
+    .top {
+
+    font-size: 1.7rem;
+    margin: 2rem 0 0 5rem;
+
+
+}
+
+    .textwidth {
+      text-overflow: ellipsis;
+    max-width: 15ch;
+}
+
+    .aboutus{
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+}
