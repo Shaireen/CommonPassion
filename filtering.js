@@ -36,8 +36,9 @@ function showMovies(movie) {
     clone.querySelector(".year span").textContent = movie.gsx$year.$t;
     clone.querySelector("h3").textContent = movie.gsx$name.$t;
     clone.querySelector(".director span").textContent = movie.gsx$director.$t;
+    clone.querySelector(".movieimg").innerHTML = "<img src=images/" + movie.gsx$photo.$t + ">";
 
-    document.querySelector("main").appendChild(clone);
+    document.querySelector(".maincontent").appendChild(clone);
 
 
 }
@@ -64,6 +65,7 @@ function filterByGenre(genre) {
     })
 }
 
+/*
 document.querySelector("#all").addEventListener("click", showAll);
 
 function showAll() {
@@ -71,3 +73,4 @@ function showAll() {
         oneMovie.classList.remove("hide")
     })
 }
+*/
