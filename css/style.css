@@ -28,6 +28,7 @@ header {
 
 
 }
+
 /*
 header img {
     margin: auto;
@@ -48,7 +49,8 @@ header img {
 }
 
 .mySlides img {
-    width: 100vw; /* image box size as % of container, see step 1 */
+    width: 100vw;
+    /* image box size as % of container, see step 1 */
     height: 80vh;
     object-fit: cover;
 }
@@ -80,6 +82,7 @@ li {
     padding: 25px 30px;
     text-decoration: none;
     font-size: 20px;
+    transition: all .5s;
 }
 
 .title {
@@ -87,7 +90,11 @@ li {
 }
 
 .topnav a:hover {
-    text-shadow: 2px 2px 8px #FF0000;
+    text-shadow: 0px 0px 10px #FF0000;
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-underline-position: under;
+
 }
 
 .topnav .icon {
@@ -108,7 +115,7 @@ aside a:hover {
 .topnav a.active {
     text-decoration: underline;
     text-decoration-color: #e3331e;
-     text-underline-position: under;
+    text-underline-position: under;
 }
 
 main {
@@ -137,8 +144,6 @@ main {
     grid-area: main2;
     padding-top: 20px;
     line-height: 1.2;
-
-
 }
 
 .maincontent {
@@ -176,9 +181,10 @@ main {
 
 
 .anim {
-   color: black; /* button text color */
+    color: black;
+    /* button text color */
     outline: none;
-    background: transparent;
+    background: #006295;
     text-transform: uppercase;
     font-family: "Staatliches", sans-serif;
     font-size: 1.7rem;
@@ -191,9 +197,15 @@ main {
     transition: all .5s;
 }
 
+.anim:hover {
+    box-shadow: 0px 0px 20px 10px #e3331e;
+    color: white;
 
-.anim:before, .anim:after {
-     content: '';
+}
+
+/*.anim:before,
+.anim:after {
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -202,13 +214,14 @@ main {
     height: 100%;
     background: #e3331e;
     z-index: -1;
-    transform: translate3D(0,-100%,0);
+    transform: translate3D(0, -100%, 0);
     transition: all .5s;
 }
-.anim:before{
+
+.anim:before {
     background: #bb9a46;
     z-index: -2;
-    transform: translate3D(0,0,0);
+    transform: translate3D(0, 0, 0);
 }
 
 .anim:hover:after {
@@ -225,32 +238,33 @@ main {
 .slide:hover:after {
     transform: translate3D(0, 0, 0);
     transition: all .5s;
-}
+}*/
 
 
 .bottom-left {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.2rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.2rem;
     line-height: 1.2;
-  color: #ffffff;
+    color: #ffffff;
 
-  position: absolute;
-  bottom: 35%;
-  left: 5%;
+    position: absolute;
+    bottom: 35%;
+    left: 5%;
 
-   text-shadow:
-       3px 3px 20px #000,
-     -1px -1px 10px #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
+    text-shadow:
+        3px 3px 20px #000,
+        -1px -1px 10px #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 
 }
 
 .textwidth {
-      text-overflow: ellipsis;
+    text-overflow: ellipsis;
     max-width: 20ch;
 }
+
 .top {
 
     display: inline-block;
@@ -268,8 +282,8 @@ main {
 }
 
 .top:hover {
-   box-shadow: 0px 0px 20px 10px #e3331e;
-   text-shadow: 0px 0px 12px #bb9a46;
+    box-shadow: 0px 0px 20px 10px #e3331e;
+    text-shadow: 0px 0px 12px #bb9a46;
 }
 
 /*.top:after, .top:before {
@@ -291,7 +305,6 @@ main {
     transition: all .5s;
 }*/
 .aboutus {
-    width: 60%;
     padding: 2rem;
 
 
@@ -383,7 +396,7 @@ h3 {
     font-weight: 700;
     text-align: center;
     font-size: 1.7rem;
-     color: #bb9a46;
+    color: #bb9a46;
 }
 
 
@@ -531,11 +544,11 @@ aside a {
 
     .top {
 
-    font-size: 2rem;
-    margin: 2rem 0 0 13rem;
+        font-size: 2rem;
+        margin: 2rem 0 0 13rem;
 
 
-}
+    }
 
     .topnav {
         width: 100%;
@@ -581,7 +594,7 @@ main {
 
 @media screen and (max-width: 500px) {
 
-  .bottom-left {
+    .bottom-left {
         font-size: 1.5rem;
         bottom: 30%;
     }
@@ -589,11 +602,11 @@ main {
 
     .top {
 
-    font-size: 1.7rem;
-    margin: 2rem 0 0 9rem;
+        font-size: 1.7rem;
+        margin: 2rem 0 0 9rem;
 
 
-}
+    }
 
 
 
@@ -601,32 +614,34 @@ main {
 
 @media screen and (max-width: 400px) {
 
-  .bottom-left {
+    .bottom-left {
         font-size: 1.5rem;
         bottom: 20%;
-      left: 10%;
+        left: 10%;
     }
 
 
     .top {
 
-    font-size: 1.7rem;
-    margin: 2rem 0 0 5rem;
+        font-size: 1.7rem;
+        margin: 2rem 0 0 5rem;
 
 
-}
+    }
 
     .textwidth {
-      text-overflow: ellipsis;
-    max-width: 15ch;
-}
+        text-overflow: ellipsis;
+        max-width: 15ch;
+    }
 
-    .aboutus{
+    .aboutus {
         width: 50%;
     }
 
     h1 {
         font-size: 2.5rem;
     }
+
+
 
 }
