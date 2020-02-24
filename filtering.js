@@ -23,10 +23,14 @@ function showMovies(movie) {
     for (i = 0; i < actorSplit.length; i++) {
         const elemLi = document.createElement("li");
         elemLi.textContent = actorSplit[i];
-        if (actorSplit[i] == "Mads Mikkelsen" || actorSplit[i] == " Mads Mikkelsen") {
-            clone.querySelector(".oneMovie").classList.add("mads");
-        }
-        clone.querySelector(".actors").appendChild(elemLi);
+        clone.querySelector(".actors span").appendChild(elemLi);
+
+    }
+
+     for (i = 0; i < genreSplit.length; i++) {
+        const elemLi = document.createElement("li");
+        elemLi.textContent = genreSplit[i];
+        clone.querySelector(".genre span").appendChild(elemLi);
 
     }
     const art = clone.querySelector('article');
@@ -36,7 +40,8 @@ function showMovies(movie) {
     clone.querySelector(".year span").textContent = movie.gsx$year.$t;
     clone.querySelector("h3").textContent = movie.gsx$name.$t;
     clone.querySelector(".director span").textContent = movie.gsx$director.$t;
-    clone.querySelector(".movieimg").innerHTML = "<img src=images/" + movie.gsx$photo.$t + ">";
+    clone.querySelector(".time span").textContent = movie.gsx$runtime.$t;
+    clone.querySelector(".imgplace").innerHTML = "<img src=images/databaseimg/" + movie.gsx$photo.$t + ">";
 
     document.querySelector(".maincontent").appendChild(clone);
 
@@ -65,7 +70,6 @@ function filterByGenre(genre) {
     })
 }
 
-/*
 document.querySelector("#all").addEventListener("click", showAll);
 
 function showAll() {
@@ -73,4 +77,3 @@ function showAll() {
         oneMovie.classList.remove("hide")
     })
 }
-*/

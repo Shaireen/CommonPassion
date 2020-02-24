@@ -37,7 +37,9 @@ header img {
 
 }
 
-
+.hide {
+    display: none;
+}
 
 li {
     list-style: none;

@@ -49,47 +49,41 @@
                     <h2>Filters</h2>
                     <section class="sidebar">
                         <div class="title">Genres:</div>
-                        <ul>
-                           <div class="genres">
-                            <li>
-                                <button>Drama</button></li>
-                            <li>
-                                <button>Crime</button>
-                            </li>
-                            <li>
-                                <button>Comedy</button>
-                            </li>
-                            </div>
-                            <li>
-                                <button>Comedy</button>
-                            </li>
-                        </ul>
+
+                        <div class="genres">
+
+                            <button data-filter='drama'>Drama</button>
+                            <button data-filter='crime'>Crime</button>
+                            <button data-filter='comedy'>Comedy</button>
+                            <button data-filter='thriller'>Thriller</button>
+                            <button data-filter='romance'>Romance</button>
+                            <button data-filter='war'>War</button>
+                            <button data-filter='action'>Action</button>
+                            <button data-filter='biography'>Biography</button>
+
+                        </div>
+
+                        <button id="all">All</button>
+
+
 
                         <div class="title">Actors:</div>
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="vehicle1"> Mads Mikkelsen</label></li>
-                            <li>
-                                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                                <label for="vehicle2"> Pilou Asbæk</label></li>
-                            <li>
-                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                                <label for="vehicle3"> Other</label></li>
-                        </ul>
+
                     </section>
                     <!--<a href="pages/aboutme.html" class="sidelink">Read more...</a>-->
                 </article>
                 <template>
                     <article class="oneMovie">
                         <h3>The Hunt</h3>
-                        <img src="images/thehunt.jpg" class="movieimg">
+                        <div class="imgplace">
+                            <!-- <img src="images/thehunt.jpg" class="movieimg">-->
+                        </div>
 
                         <p class="director">Director: <span></span></p>
                         <p class="genre">Genre: <span></span></p>
                         <p class="year">Year: <span></span></p>
                         <p class="actors">Main actors: <span></span></p>
-                        <p class="time">Time: <span></span> </p>
+                        <p class="time">Time: <span></span> minutes</p>
                         <button class="anim slide">DETAILS</button>
                     </article>
                 </template>
@@ -171,5 +165,5 @@
 
 
     <script src="jscript.js"></script>
-   <script src="filtering.js"></script>
+    <script src="filtering.js"></script>
 </body></html>
