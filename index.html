@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="https://use.typekit.net/jem1mpo.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jem1mpo.css">
 
 
     <title>Design Havn</title>
@@ -16,7 +16,7 @@
 
     <header>
 
-            <img src="images/headershadow.png">
+        <img src="images/headershadow.png">
 
 
     </header>
@@ -25,7 +25,7 @@
     <nav class="topnav" id="myTopnav">
 
         <a href="index.html">HOME</a>
-        <a href="pages/flatdesign.html" class="active">DRAMA</a>
+        <a href="pages/flatdesign.html" class="active">MOVIES</a>
         <a href="pages/history.html">CRIME</a>
         <a href="pages/websitedesign.html">COMEDY</a>
         <a href="pages/aboutme.html">ABOUT US</a>
@@ -39,7 +39,7 @@
 
     <main>
 
-        <h1 class="title">Drama</h1>
+        <h1 class="title">MOVIES</h1>
         <article class="main">
 
             <article class="maincontent">
@@ -48,18 +48,23 @@
 
                     <h2>Filters</h2>
                     <section class="sidebar">
-                        <div class="title">Directors:</div>
+                        <div class="title">Genres:</div>
                         <ul>
+                           <div class="genres">
                             <li>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="vehicle1"> Thomas Vinterberg</label></li>
+                                <button>Drama</button></li>
                             <li>
-                                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                                <label for="vehicle2"> Susanne Bier</label></li>
+                                <button>Crime</button>
+                            </li>
                             <li>
-                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                                <label for="vehicle3"> Other</label></li>
+                                <button>Comedy</button>
+                            </li>
+                            </div>
+                            <li>
+                                <button>Comedy</button>
+                            </li>
                         </ul>
+
                         <div class="title">Actors:</div>
                         <ul>
                             <li>
@@ -75,19 +80,21 @@
                     </section>
                     <!--<a href="pages/aboutme.html" class="sidelink">Read more...</a>-->
                 </article>
-                <article class="movie">
-                    <h3>The Hunt</h3>
-                    <img src="images/thehunt.jpg" alt="You get: a white computer with matching peripherals">
+                <template>
+                    <article class="oneMovie">
+                        <h3>The Hunt</h3>
+                        <img src="images/thehunt.jpg" alt="You get: a white computer with matching peripherals">
 
-                    <p class="director">Director: <span>Thomas Vinterberg</span></p>
-                    <p class="genre">Genre: <span>Drama</span></p>
-                    <p class="year">Year: <span>2012</span></p>
-                    <p class="actors">Main actors: <span>Mads Mikkelsen, Thomas Bo Larsen, Annika Wedderkop</span></p>
-                    <p class="time">Time: <span>115 minutes</span> </p>
-                    <button class="slide">DETAILS</button>
-                </article>
+                        <p class="director">Director: <span>Thomas Vinterberg</span></p>
+                        <p class="genre">Genre: <span>Drama</span></p>
+                        <p class="year">Year: <span>2012</span></p>
+                        <p class="actors">Main actors: <span>Mads Mikkelsen, Thomas Bo Larsen, Annika Wedderkop</span></p>
+                        <p class="time">Time: <span>115 minutes</span> </p>
+                        <button class="anim slide">DETAILS</button>
+                    </article>
+                </template>
 
-                <article class="movie">
+                <!--         <article class="movie">
                     <h3>After the wedding</h3>
                     <img src="images/afterthewedding.jpg" alt="You get: a white computer with matching peripherals">
 
@@ -109,9 +116,9 @@
                     <p class="actors">Main actors: <span>Alicia Vikander, Mads Mikkelsen, Mikkel Boe Følsgaard</span></p>
                     <p class="time">Time: <span>137 minutes</span> </p>
                     <button class="slide">DETAILS</button>
-                </article>
+                </article>-->
 
-              <!--  <article class="movie">
+                <!--  <article class="movie">
                     <h3>Mouse</h3>
                     <p>A computer mouse is a pointing device (hand control) that detects two-dimensional motion relative to a surface. This motion is typically translated into the motion of a pointer on a display, which allows a smooth control of the graphical user interface. Clickity Click!</p>
                     <button>BUY NOW</button>
@@ -137,7 +144,7 @@
         </article>
 
 
-      <!--  <aside>
+        <!--  <aside>
                      <article class="side">
 
 
@@ -153,15 +160,16 @@
         </aside>-->
     </main>
     <article class="footer">
-            <h3>Contact</h3>
-            <div class="columns">
-                <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum.</div>
-                <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum.</div>
-                <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum.</div>
-                <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum.</div>
-            </div>
-        </article>
+        <h3>Contact</h3>
+        <div class="columns">
+            <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum.</div>
+            <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum.</div>
+            <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum.</div>
+            <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum.</div>
+        </div>
+    </article>
 
 
     <script src="jscript.js"></script>
+    <script src="filtering.js"></script>
 </body></html>
