@@ -10,6 +10,8 @@ function handleData(data) {
     myData.forEach(showMovies);
 }
 
+var clone;
+
 function showMovies(movie) {
 
     const genreSplit = movie.gsx$genre.$t.split(", ");
@@ -22,7 +24,7 @@ function showMovies(movie) {
     const year = movie.gsx$year.$t;
 
     const template = document.querySelector("template").content;
-    const clone = template.cloneNode(true);
+    clone = template.cloneNode(true);
     const art = clone.querySelector('article');
     var actorSpaceless;
     var directorSpaceless;
@@ -63,10 +65,11 @@ function showMovies(movie) {
     clone.querySelector(".time span").textContent = movie.gsx$runtime.$t;
     clone.querySelector(".imgplace").innerHTML = "<img src=images/databaseimg/" + movie.gsx$photo.$t + ">";
 
+
+
     document.querySelector(".maincontent").appendChild(clone);
 
     art.classList.add(year);
-
 
 
 
