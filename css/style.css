@@ -11,7 +11,7 @@ body {
     margin: 0;
     font-family: classico-urw, sans-serif;
     color: white;
-    background-color: #0A0A0A;
+    background-color: #000;
     overflow-x: hidden;
 }
 
@@ -47,12 +47,13 @@ li {
 
 
 .topnav {
-    background-color: #1C1C1C;
+    background-color: #000;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-end;
+
     flex: 100%;
     width: 100%;
     position: fixed;
@@ -64,19 +65,34 @@ li {
 
 
 .topnav a {
-    color: #ffffff;
+    color: #bb9a46;
     text-align: center;
-    padding: 15px 30px;
+    font-family: "Staatliches";
+    padding: 25px 25px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 2em;
+    transition: all .5s;
+}
+
+.topnav > img {
+    height: 90px;
+    width: auto;
+    position: absolute;
+    left: 0;
+}
+
+
+.topnav a:hover {
+
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-underline-position: under;
+    color: #006295;
+
 }
 
 .title {
     font-weight: 700;
-}
-
-.topnav a:hover {
-    text-shadow: 2px 2px 8px #FF0000;
 }
 
 .topnav .icon {
@@ -106,8 +122,8 @@ main {
     margin: auto;
     grid-template-areas:
         "title title title title title title"
-        "main2 main2 main2 main2 aside aside"
-        "main2 main2 main2 main2 aside aside"
+        "main2 main2 main2 main2 main2 main2"
+        "main2 main2 main2 main2 main2 main2"
        ;
     justify-content: center;
 
@@ -118,6 +134,8 @@ main {
 
 .title {
     grid-area: title;
+    font-weight: 500;
+
 }
 
 .main {
@@ -136,8 +154,8 @@ main {
 .reviews-container {
     margin-top: 5rem;
     padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
+    background: #fff;
+
 
 }
 
@@ -166,10 +184,7 @@ main {
 .maincontent article:first-child {
     width: 90%;
     height: 80%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
     border: none;
-    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
 }
 
 .main img {
@@ -180,15 +195,7 @@ main {
     padding-bottom: 15px;
 }
 
-aside {
-    display: none;
-    grid-area: aside;
-    background-color: #000000;
-    z-index: 2;
-    padding: 0.5rem;
 
-
-}
 
 .sidebar {
     font-size: 20px;
@@ -197,13 +204,7 @@ aside {
     margin: auto;
 }
 
-h2 {
-    text-align: center;
-    padding-top: 45px;
-    padding-bottom: 20px;
-    margin: auto;
-    color: #bb9a46;
-}
+
 
 .sidelink {
     padding-left: 40%;
