@@ -13,9 +13,10 @@ function handleData(data) {
 function showMovies(movie) {
 
     const genreSplit = movie.gsx$genre.$t.split(", ");
-    console.log(genreSplit);
+
     const actorSplit = movie.gsx$mainactor.$t.split(", ");
-    console.log(actorSplit);
+
+    const directorSplit = movie.gsx$director.$t.split(", ");
 
 
     const year = movie.gsx$year.$t;
@@ -24,13 +25,13 @@ function showMovies(movie) {
     const clone = template.cloneNode(true);
     const art = clone.querySelector('article');
     var actorSpaceless;
+    var directorSpaceless;
 
     for (i = 0; i < actorSplit.length; i++) {
         const elemLi = document.createElement("li");
         elemLi.textContent = actorSplit[i];
         actorSpaceless = actorSplit[i].replace(/\s+/g, '');
-         art.classList.add(actorSpaceless);
-        console.log(actorSpaceless)
+        art.classList.add(actorSpaceless);
         clone.querySelector(".actors span").appendChild(elemLi);
 
     }
@@ -42,6 +43,15 @@ function showMovies(movie) {
 
     }
 
+    for (i = 0; i < directorSplit.length; i++) {
+        const elemLi = document.createElement("li");
+        elemLi.textContent = directorSplit[i];
+        directorSpaceless = directorSplit[i].replace(/\s+/g, '');
+        art.classList.add(directorSpaceless);
+        clone.querySelector(".director span").appendChild(elemLi);
+
+    }
+
     genreSplit.forEach(genre => {
         art.classList.add(genre)
     })
@@ -50,7 +60,6 @@ function showMovies(movie) {
 
     clone.querySelector(".year span").textContent = movie.gsx$year.$t;
     clone.querySelector("h3").textContent = movie.gsx$name.$t;
-    clone.querySelector(".director span").textContent = movie.gsx$director.$t;
     clone.querySelector(".time span").textContent = movie.gsx$runtime.$t;
     clone.querySelector(".imgplace").innerHTML = "<img src=images/databaseimg/" + movie.gsx$photo.$t + ">";
 
@@ -73,12 +82,7 @@ document.querySelectorAll('.genres button').forEach(button => {
         filterByGenre(button.dataset.filter)
     })
 })
-/*document.querySelector("#dramafilter").addEventListener("click", function(){
-    filterByGenre('drama')
-});
-document.querySelector("#crimefilter").addEventListener("click", function(){
-    filterByGenre('crime')
-});*/
+
 function filterByGenre(genre) {
     document.querySelectorAll(".oneMovie").forEach(oneMovie => {
         if (oneMovie.classList.contains(genre)) {
@@ -89,21 +93,36 @@ function filterByGenre(genre) {
     })
 }
 
+
+
 document.querySelectorAll('.actorsfilter button').forEach(button => {
     button.addEventListener('click', function () {
         //console.log(button.dataset.filter)
         filterByActor(button.dataset.filter)
     })
 })
-/*document.querySelector("#dramafilter").addEventListener("click", function(){
-    filterByGenre('drama')
-});
-document.querySelector("#crimefilter").addEventListener("click", function(){
-    filterByGenre('crime')
-});*/
+
 function filterByActor(actor) {
     document.querySelectorAll(".oneMovie").forEach(oneMovie => {
         if (oneMovie.classList.contains(actor)) {
+            oneMovie.classList.remove('hide')
+        } else {
+            oneMovie.classList.add('hide')
+        }
+    })
+}
+
+
+document.querySelectorAll('.directorsfilter button').forEach(button => {
+    button.addEventListener('click', function () {
+        //console.log(button.dataset.filter)
+        filterByDirector(button.dataset.filter)
+    })
+})
+
+function filterByDirector(director) {
+    document.querySelectorAll(".oneMovie").forEach(oneMovie => {
+        if (oneMovie.classList.contains(director)) {
             oneMovie.classList.remove('hide')
         } else {
             oneMovie.classList.add('hide')
