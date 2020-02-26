@@ -21,7 +21,7 @@ function handleData(data) {
     const clone2 = template2.cloneNode(true);
 
     clone2.querySelector(".front h3").textContent = cMovie.gsx$name.$t;
-     clone2.querySelector(".imgplace").innerHTML = "<img src=images/databaseimg/" + cMovie.gsx$photo.$t + ">";
+     clone2.querySelector(".imgplace").innerHTML = "<img src=../images/databaseimg/" + cMovie.gsx$photo.$t + ">";
     document.querySelector(".movies").appendChild(clone2);
     }
 
@@ -80,7 +80,7 @@ function showMovies(movie) {
     clone.querySelector(".card .year span").textContent = movie.gsx$year.$t;
     clone.querySelector(".front h3").textContent = movie.gsx$name.$t;
     clone.querySelector(".back .time span").textContent = movie.gsx$runtime.$t;
-    clone.querySelector(".imgplace").innerHTML = "<img src=images/databaseimg/" + movie.gsx$photo.$t + ">";
+    clone.querySelector(".imgplace").innerHTML = "<img src=../images/databaseimg/" + movie.gsx$photo.$t + ">";
 
 clone.querySelector(".anim").addEventListener("click", flipCard);
 
