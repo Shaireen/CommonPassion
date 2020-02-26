@@ -23,12 +23,12 @@
 
 
     <nav class="topnav" id="myTopnav">
-         <img src="images/logoshadow-03.png">
+        <img src="images/logoshadow-03.png">
 
-        <a href="index.html">HOME</a>
-        <a href="pages/flatdesign.html" class="active">MOVIES</a>
-        <a href="pages/history.html">RECOMMENDED</a>
-        <a href="pages/aboutme.html">ABOUT</a>
+        <a href="../index.html">HOME</a>
+        <a href="movies.html" class="active">MOVIES</a>
+        <a href="#comments">RECOMMENDED</a>
+        <a href="about.html">ABOUT</a>
 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -40,99 +40,135 @@
     <main>
 
 
-             <article class="sorting">
+        <article class="sorting">
 
 
-                    <h1>Filters</h1>
-                        <hr>
+            <h1>Filters</h1>
+            <hr>
 
-                        <div class="title">Genre:</div>
+            <div class="title">Genre:</div>
 
-                        <div class="genres">
+            <div class="genres">
 
-                            <button data-filter='drama'>Drama</button>
-                            <button data-filter='crime'>Crime</button>
-                            <button data-filter='comedy'>Comedy</button>
-                            <button data-filter='thriller'>Thriller</button>
-                            <button data-filter='romance'>Romance</button>
-                            <button data-filter='war'>War</button>
-                            <button data-filter='action'>Action</button>
-                            <button data-filter='biography'>Biography</button>
+                <button data-filter='drama'>Drama</button>
+                <button data-filter='crime'>Crime</button>
+                <button data-filter='comedy'>Comedy</button>
+                <button data-filter='thriller'>Thriller</button>
+                <button data-filter='romance'>Romance</button>
+                <button data-filter='war'>War</button>
+                <button data-filter='action'>Action</button>
+                <button data-filter='biography'>Biography</button>
 
-                        </div>
+            </div>
 
-                        <button class="all">All</button>
+            <button class="all">All</button>
 
 
 
-                        <div class="title">Years:</div>
-                        <button class="firstdecade">1990-2000</button>
-                        <button class="seconddecade">2001-2010</button>
-                        <button class="thirddecade">2011-2020</button>
-                        <button class="all">All</button>
-                        <div class="title">Actor:</div>
-                        <div class="actorsfilter">
-                            <button data-filter='MadsMikkelsen'>Mads Mikkelsen</button>
-                            <button data-filter='NikolajLieKaas'>Nikolaj Lie Kaas</button>
-                            <button class="all">All</button>
+            <div class="title">Years:</div>
+            <button class="firstdecade">1990-2000</button>
+            <button class="seconddecade">2001-2010</button>
+            <button class="thirddecade">2011-2020</button>
+            <button class="all">All</button>
+            <div class="title">Actor:</div>
+            <div class="actorsfilter">
+                <button data-filter='MadsMikkelsen'>Mads Mikkelsen</button>
+                <button data-filter='NikolajLieKaas'>Nikolaj Lie Kaas</button>
+                <button class="all">All</button>
 
-                        </div>
-                          <div class="title">Director:</div>
-                        <div class="directorsfilter">
-                            <button data-filter='ThomasVinterberg'>Thomas Vinterberg</button>
-                            <button data-filter='SusanneBier'>Susanne Bier</button>
-                            <button data-filter='NicolasWindingRefn'>Nicolas Winding Refn</button>
-                            <button class="all">All</button>
+            </div>
+            <div class="title">Director:</div>
+            <div class="directorsfilter">
+                <button data-filter='ThomasVinterberg'>Thomas Vinterberg</button>
+                <button data-filter='SusanneBier'>Susanne Bier</button>
+                <button data-filter='NicolasWindingRefn'>Nicolas Winding Refn</button>
+                <button class="all">All</button>
 
-                        </div>
-                    <!--<a href="pages/aboutme.html" class="sidelink">Read more...</a>-->
-                </article>
+            </div>
+            <!--<a href="pages/aboutme.html" class="sidelink">Read more...</a>-->
+        </article>
 
-                <div class="titlewrap">
-                <h1 class="title">MOVIES</h1>
-                <hr>
+        <div class="titlewrap">
+            <h1 class="title">MOVIES</h1>
+            <hr>
 
             <article class="maincontent">
 
 
-                <template>
+                <template id="allmovies">
 
                     <article class="oneMovie">
-                        <h3>The Hunt</h3>
-                        <div class="imgplace">
+                        <div class="card">
+                            <div class="front">
+                                <h3>The Hunt</h3>
+                                <div class="imgplace">
+                                </div>
+                                <button class="anim">DETAILS</button>
+                            </div> <div class="back">
+
+                            <p class="director">Director: <span></span></p>
+                            <p class="genre">Genre: <span></span></p>
+                            <p class="year">Year: <span></span></p>
+                            <p class="actors">Main actors: <span></span></p>
+                            <p class="time">Time: <span></span> minutes</p>
                         </div>
+        </div>
 
 
+        </article>
 
+        </template>
 
-                        <p class="director">Director: <span></span></p>
-                        <p class="genre">Genre: <span></span></p>
-                        <p class="year">Year: <span></span></p>
-                        <p class="actors">Main actors: <span></span></p>
-                        <p class="time">Time: <span></span> minutes</p>
-                        <button class="anim">DETAILS</button>
-
-
-                    </article>
-
-                </template>
-
-            </article>
-            </div>
+        </article>
+        </div>
 
 
 
 
     </main>
-           <article class="reviews-container">
-                <h3>Reviews</h3>
-                <div class="reviews">
-                    <div class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum. Aliquam erat volutpat. Duis cursus nunc vel consequat eleifend. Nunc ac eros sem. Quisque faucibus porta finibus. </div>
-                    <div class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum. Aliquam erat volutpat. Duis cursus nunc vel consequat eleifend. Nunc ac eros sem. Quisque faucibus porta finibus. Integer sollicitudin lacus a tortor dapibus consequat.</div>
-                    <div class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum. Aliquam erat volutpat. </div>
-                    <div class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum. Aliquam erat volutpat..</div>
-                </div>
-            </article>
+        <article class="critics">
+        <h1>Critics Reviews</h1>
+        <div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum.</div>
+        <div class="movies">
+
+                <template id="cmovies">
+
+                    <article class="oneMovie">
+                        <div class="card">
+                            <div class="front">
+                                <h3>The Hunt</h3>
+                                <div class="imgplace">
+                                </div>
+                            </div> <div class="back">
+
+                            <p class="director">Director: <span></span></p>
+                            <p class="genre">Genre: <span></span></p>
+                            <p class="year">Year: <span></span></p>
+                            <p class="actors">Main actors: <span></span></p>
+                            <p class="time">Time: <span></span> minutes</p>
+                        </div>
+        </div>
+
+
+        </article>
+
+        </template>
+
+        </div>
+    </article>
+    <article class="reviews-container">
+        <h1>Community Reviews</h1>
+         <div class="comment"  id="comments">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit ac purus aliquam rutrum. Nulla dapibus quam a nisi consectetur venenatis. Nam efficitur arcu vestibulum quam efficitur dictum.</div>
+
+        <div class="reviews">
+                <p>
+        <label for="new-comment">Add a comment</label><textarea name="Text1" id="new-comment" rows="6"></textarea><button class="add">Add</button>
+      </p>
+          <div class="placeholder">
+
+        </div>
+        </div>
+    </article>
     <article class="footer">
         <h3>Contact</h3>
         <div class="columns">

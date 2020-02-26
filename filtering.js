@@ -8,6 +8,23 @@ function handleData(data) {
     const myData = data.feed.entry;
     console.log(myData);
     myData.forEach(showMovies);
+
+     cMovies = myData.filter(function (movie) {
+        return movie.gsx$topmovie.$t === "TRUE";
+    });
+
+    cMovies.forEach(showCmovies)
+
+    function showCmovies(cMovie){
+
+     const template2 = document.querySelector("#cmovies").content;
+    const clone2 = template2.cloneNode(true);
+
+    clone2.querySelector(".front h3").textContent = cMovie.gsx$name.$t;
+     clone2.querySelector(".imgplace").innerHTML = "<img src=images/databaseimg/" + cMovie.gsx$photo.$t + ">";
+    document.querySelector(".movies").appendChild(clone2);
+    }
+
 }
 
 var clone;
@@ -23,7 +40,7 @@ function showMovies(movie) {
 
     const year = movie.gsx$year.$t;
 
-    const template = document.querySelector("template").content;
+    const template = document.querySelector("#allmovies").content;
     clone = template.cloneNode(true);
     const art = clone.querySelector('article');
     var actorSpaceless;
@@ -60,10 +77,18 @@ function showMovies(movie) {
 
 
 
-    clone.querySelector(".year span").textContent = movie.gsx$year.$t;
-    clone.querySelector("h3").textContent = movie.gsx$name.$t;
-    clone.querySelector(".time span").textContent = movie.gsx$runtime.$t;
+    clone.querySelector(".card .year span").textContent = movie.gsx$year.$t;
+    clone.querySelector(".front h3").textContent = movie.gsx$name.$t;
+    clone.querySelector(".back .time span").textContent = movie.gsx$runtime.$t;
     clone.querySelector(".imgplace").innerHTML = "<img src=images/databaseimg/" + movie.gsx$photo.$t + ">";
+
+clone.querySelector(".anim").addEventListener("click", flipCard);
+
+    function flipCard(){
+
+        const card = clone.querySelector(".card");
+        console.log(card)
+    }
 
 
 
@@ -192,4 +217,19 @@ function showAll() {
     document.querySelectorAll(".oneMovie").forEach(oneMovie => {
         oneMovie.classList.remove("hide")
     })
+}
+
+
+var textInput = document.querySelector("textarea");
+var addButton = document.querySelector(".add");
+var container = document.querySelector(".placeholder");
+
+addButton.addEventListener("click", addComment);
+
+function addComment() {
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML =
+    newDiv.textContent = "Anonymous user said: " + textInput.value;
+    newDiv.classList.add("review");
+    container.appendChild(newDiv);
 }
