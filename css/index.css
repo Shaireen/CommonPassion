@@ -1,0 +1,677 @@
+@import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: classico-urw, sans-serif;
+    color: white;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+
+header {
+
+    /*display: flex;
+    max-width: 100%;*/
+    grid-area: header;
+    z-index: -1;
+
+
+
+
+
+}
+
+/*
+header img {
+    margin: auto;
+    display: flex;
+    width: 70%;
+
+
+
+}*/
+
+.mySlides {
+    display: none;
+    margin-top: 50px;
+    position: relative;
+
+
+
+}
+
+.mySlides img {
+    width: 100vw;
+    /* image box size as % of container, see step 1 */
+    height: 60vh;
+    object-fit: cover;
+}
+
+li {
+    list-style: none;
+}
+
+
+.topnav {
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+
+    flex: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+
+
+}
+
+.topnav a {
+    color: #bb9a46;
+    text-align: center;
+    font-family: "Staatliches";
+    padding: 25px 25px;
+    text-decoration: none;
+    font-size: 2em;
+    transition: all .5s;
+}
+
+.topnav > img {
+    height: 90px;
+    width: auto;
+    position: absolute;
+    left: 0;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.topnav a:hover {
+
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-underline-position: under;
+    color: #006295;
+
+}
+
+.topnav .icon {
+    display: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+}
+
+aside a:hover {
+    text-decoration: underline;
+
+}
+
+.topnav a.active {
+    text-decoration: underline;
+    text-decoration-color: #e3331e;
+    text-underline-position: under;
+}
+
+main {
+
+
+    margin: auto;
+    justify-content: center;
+    justify-items: center;
+    padding-bottom: 8%;
+    font-size: 18px;
+
+}
+
+.title {
+    grid-area: title;
+}
+
+.main {
+    grid-area: main2;
+    padding-top: 20px;
+    line-height: 1.2;
+}
+
+.maincontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+    justify-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
+    padding: 1rem;
+}
+
+.reviews-container {
+    margin-top: 5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
+}
+
+.genres {
+    margin-top: 6rem;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: center;
+    margin: auto;
+    padding: 3rem;
+
+}
+
+
+.anim {
+    background: transparent;
+    /* button text color */
+    outline: none;
+    color: #3ca2db;
+    text-transform: uppercase;
+    font-family: "Staatliches", sans-serif;
+    font-size: 2rem;
+    border: 1px solid white;
+    padding: 2rem 4rem;
+    margin: 2rem;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: all .5s;
+
+
+
+
+}
+
+.anim:hover {
+    box-shadow: 0px 0px 20px 10px ;
+    color: #bb9a46;
+    cursor: pointer;
+    background: #006295;
+
+}
+
+.bdescription, .bdescription:hover {
+font-family: "Montserrat", sans-serif;
+
+    font-size: 1.5rem;
+    color: white;
+
+
+
+}
+
+/*.anim:before,
+.anim:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #e3331e;
+    z-index: -1;
+    transform: translate3D(0, -100%, 0);
+    transition: all .5s;
+}
+
+.anim:before {
+    background: #bb9a46;
+    z-index: -2;
+    transform: translate3D(0, 0, 0);
+}
+
+.anim:hover:after {
+    transform: translate3D(0, 0, 0);
+    transition: all .5s;
+}
+
+.slide:after {
+    top: 0;
+    z-index: -1;
+    transform: translate3D(-101%, 0, 0);
+}
+
+.slide:hover:after {
+    transform: translate3D(0, 0, 0);
+    transition: all .5s;
+}*/
+
+
+.bottom-left {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: #ffffff;
+
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+
+    text-shadow:
+        3px 3px 20px #000,
+        -1px -1px 10px #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+
+}
+
+.textwidth {
+    text-overflow: ellipsis;
+    max-width: 20ch;
+}
+
+.top {
+
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border: 1px white solid;
+    font-family: "Staatliches", sans-serif;
+    font-size: 2rem;
+    margin: 2rem 0 0 18rem;
+    color: white;
+    background: transparent;
+    overflow: hidden;
+    transition: all .5s;
+    position: relative;
+
+}
+
+.top:hover {
+    box-shadow: 0px 0px 20px 10px #e3331e;
+    text-shadow: 0px 0px 12px #bb9a46;
+}
+
+/*.top:after, .top:before {
+     content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #bb9a46;
+    z-index: -1;
+    transform: translate3D(-100%,0,0);
+    transition: all .5s;
+}
+
+.top:hover:after {
+    transform: translate3D(0, 0, 0);
+    transition: all .5s;
+}*/
+.aboutus {
+    padding: 2rem;
+    width: 60%;
+
+
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+
+}
+
+.review {
+    padding: 1rem;
+}
+
+/*.maincontent > article {
+    padding: 2rem;
+    margin: 0.5rem;
+    border: 1px solid white;
+}
+
+.maincontent article:first-child {
+    width: 90%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
+}*/
+
+
+aside {
+    display: none;
+    grid-area: aside;
+    background-color: #000000;
+    z-index: 2;
+    padding: 0.5rem;
+
+
+}
+
+.sidebar {
+    font-size: 20px;
+    line-height: 1.5;
+    padding-bottom: 50px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    margin: auto;
+}
+
+.sidelink {
+    padding-left: 40%;
+    font-size: 20px;
+    font-family: 'manropesemibold';
+}
+
+.side {
+    margin: 10px;
+    padding: 15%;
+    background-color: #000000;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #bb9a46;
+    text-align: center;
+    font-family: 'Staatliches', sans-serif;
+    line-height: 1;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: 'Staatliches', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #bb9a46;
+}
+
+
+p {
+    font-weight: 700;
+}
+
+p span {
+    font-weight: 400;
+}
+
+.imgcircle {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    max-width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+
+}
+
+.vector {
+    margin: auto;
+    display: flex;
+    max-width: 100px;
+    justify-content: center;
+}
+
+aside a {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 20px;
+    margin: auto;
+}
+
+.footer {
+    background-color: #1C1C1C;
+    display: grid;
+    width: 100vw;
+    padding: 1rem;
+
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: auto;
+}
+
+.column {
+    padding: 1rem;
+}
+
+.mobimg {
+    display: none;
+}
+
+/*@media only screen and (min-width:1400px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "header header header header header"
+            "main main main main main"
+            "main main main main main"
+            ;
+    }
+
+    aside {
+        margin-top: 10px;
+    }
+}*/
+
+
+/*@media only screen and (max-width: 1050px) and (min-width: 700px) {
+
+
+
+    .mySlides img {
+        height: 600px;
+        width: auto;
+    }
+}*/
+/*
+
+
+
+@media only screen and (max-width:1400px) and (min-width:700px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "header header header header"
+            "main main main main"
+            "main main main main"
+            "aside aside aside aside";
+    }
+
+    .topnav {
+        margin: auto;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 33em;
+    }
+
+    .side {
+        padding: 4%;
+    }
+
+    aside a {
+        padding: 5%;
+    }
+
+
+*/
+
+
+
+@media only screen and (max-width: 700px) {
+    /*
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "header header header header"
+            "main main main main"
+            "main main main main"
+            "aside aside aside aside";
+    }
+*/
+
+    .bottom-left {
+        font-size: 2rem;
+        bottom: 30%;
+    }
+
+    .main {
+        width: 100vw;
+    }
+
+
+    .top {
+
+        font-size: 2rem;
+        margin: 2rem 0 0 13rem;
+
+
+    }
+
+    .topnav {
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    .topnav a {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .buttons {
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+
+}
+}
+
+.topnav.responsive {
+    position: fixed;
+    top: 0;
+}
+
+.topnav.responsive a.icon {
+    position: absolute;
+    top: 0;
+}
+
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+}
+
+main {
+    margin-bottom: 0;
+
+}
+
+.side {
+    margin-top: 0;
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .bottom-left {
+        font-size: 1.5rem;
+        bottom: 30%;
+    }
+      .anim {
+        padding: 1rem 2rem;
+    }
+    .bdescription {
+        font-size: 1rem;
+    }
+
+
+    .top {
+
+        font-size: 1.7rem;
+        margin: 2rem 0 0 9rem;
+
+
+    }
+
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .bottom-left {
+        font-size: 1.5rem;
+        bottom: 20%;
+        left: 10%;
+    }
+
+
+
+    .top {
+
+        font-size: 1.7rem;
+        margin: 2rem 0 0 5rem;
+
+
+    }
+
+    .textwidth {
+        text-overflow: ellipsis;
+        max-width: 15ch;
+    }
+
+    .aboutus {
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+
+
+}
