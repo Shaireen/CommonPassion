@@ -130,7 +130,7 @@ main {
 
         "filter maincontent maincontent maincontent"
         "filter maincontent maincontent maincontent"
-        "filter maincontent maincontent maincontent"
+        "filter maincontent maincontent maincontent";
 
 
 }
@@ -138,7 +138,7 @@ main {
 
 .titlewrap {
 
- padding-top: 2rem;
+    padding-top: 2rem;
 
 }
 
@@ -150,10 +150,7 @@ main {
     grid-area: maincontent;
     width: 60vw;
     display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
-
-
-
+    grid-template-rows: repeat(auto-fill, minmax(600px, 1fr));
 }
 
 .textcontent {
@@ -186,7 +183,7 @@ main {
 .bestmovies img {
     max-width: 100%;
     justify-content: center;
-  padding: 1rem 2rem;
+    padding: 1rem 2rem;
     margin: auto;
 }
 
@@ -237,13 +234,25 @@ h1 {
 .sorting > h1 {
     text-align: left;
 }
+
+
+.textcontent h3 {
+    font-family: classico-urw, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.3rem;
+    color: black;
+    padding-top: 2rem;
+}
+
 h3 {
     font-family: 'Staatliches', sans-serif;
     font-weight: 700;
     text-align: center;
     font-size: 2rem;
-    color: #af251b;
+    color: #bb9a46;
 }
+
 
 .anim {
     background: transparent;
@@ -266,7 +275,7 @@ h3 {
 }
 
 .anim:hover {
-    box-shadow: 0px 0px 20px 10px  #bb9a46;
+    box-shadow: 0px 0px 20px 10px #bb9a46;
     color: #bb9a46;
     cursor: pointer;
     background: #006295;
@@ -289,21 +298,21 @@ h3 {
 }
 
 .sorting button:focus {
-     box-shadow: 0px 0px 5px 5px #bb9a46;
+    box-shadow: 0px 0px 5px 5px #bb9a46;
 
 }
 
 .oneMovie {
-       -webkit-perspective: 800px;
+    -webkit-perspective: 800px;
     -moz-perspective: 800px;
     -o-perspective: 800px;
     perspective: 800px;
 }
 
 .card {
-  display: grid;
-  grid-template: 1fr / 1fr;
-  grid-template-areas: "frontAndBack";
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
     -webkit-transition: -webkit-transform 1s;
     -moz-transition: -moz-transform 1s;
     -o-transition: -o-transform 1s;
@@ -317,43 +326,44 @@ h3 {
 
 
 .card div {
-      -webkit-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
 .front {
-  grid-area: frontAndBack;
+    grid-area: frontAndBack;
 }
 
 .back {
-  grid-area: frontAndBack;
-     -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
+    grid-area: frontAndBack;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-.oneMovie:hover .card{
+.oneMovie:hover .card {
 
-  transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 }
 
 .oneMovie:hover {
-    box-shadow: 0px 0px 20px 10px  #bb9a46;
+    box-shadow: 0px 0px 20px 10px #bb9a46;
 }
 
 }
+
 .card.flipped {
-    -webkit-transform: rotateY(-180deg );
-    -moz-transform: rotateY(-180deg );
-    -o-transform: rotateY(-180deg );
-    transform: rotateY(-180deg );
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 }
 
 /*.anim:before, .anim:after {
@@ -402,7 +412,6 @@ p span {
 
 .reviews-container {
     padding: 1rem;
-    margin-top: 4rem;
     width: 100vw;
     background: white;
     color: black;
@@ -410,10 +419,8 @@ p span {
 }
 
 
-
-
 .reviews {
-   display: grid;
+    display: grid;
     grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
 
 }
@@ -442,6 +449,7 @@ textarea {
     font-family: classico-urw, sans-serif;
     margin: 1rem 0;
 }
+
 .review {
     padding: 1rem 3rem;
     width: 70vw;
@@ -469,6 +477,7 @@ textarea {
 .column {
     padding: 1rem;
 }
+
 /*@media only screen and (min-width:1400px) {
     body {
         display: grid;
@@ -518,37 +527,40 @@ textarea {
 
 
 */
-@media only screen and (max-width: 950px) and (min-width: 700px){
-   main {
+@media only screen and (max-width: 950px) and (min-width: 700px) {
+    main {
 
-    grid-template-areas:
+        grid-template-areas:
 
-        "maincontent maincontent maincontent maincontent"
-        "maincontent maincontent maincontent maincontent"
-        "filter filter filter filter";
+            "maincontent maincontent maincontent maincontent"
+            "maincontent maincontent maincontent maincontent"
+            "filter filter filter filter";
 
         padding: 0;
-}
+    }
 
     .bestmovies {
         width: 90vw;
         margin: auto;
     }
+
     .topmovies {
-    width: 100vw;
+        width: 100vw;
     }
+
     .maincontent {
         margin: auto;
         width: 100vw;
     }
 
     .textcontent {
-        width:100%;
+        width: 100%;
     }
 
- h1{
+    h1 {
         line-height: 1;
     }
+
     .topnav a {
         padding: 20px 20px;
     }
@@ -556,40 +568,42 @@ textarea {
 
 
 @media only screen and (max-width: 700px) {
-main {
+    main {
 
-    grid-template-areas:
+        grid-template-areas:
 
-        "maincontent maincontent maincontent maincontent"
-        "maincontent maincontent maincontent maincontent"
-        "filter filter filter filter";
+            "maincontent maincontent maincontent maincontent"
+            "maincontent maincontent maincontent maincontent"
+            "filter filter filter filter";
 
         padding: 0;
-}
+    }
 
     .bestmovies {
         width: 90vw;
         margin: auto;
     }
+
     .topmovies {
-    width: 100vw;
+        width: 100vw;
     }
 
     .textcontent {
-        width:100%;
+        width: 100%;
     }
 
     .column {
         width: 95%;
     }
+
     .maincontent {
         margin: auto;
         width: 85vw;
-         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
     }
 
- h1 {
+    h1 {
         line-height: 1;
     }
 
@@ -640,4 +654,3 @@ main {
 .side {
     margin-top: 0;
 }
-

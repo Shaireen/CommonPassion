@@ -374,6 +374,9 @@ p span {
 
 
 }
+.critics .comment {
+width: 38em;
+}
 .critics h1 {
     line-height: 1;
 }
@@ -388,9 +391,13 @@ p span {
 }
 
 .comment {
-    width: 90vw;
     margin: auto;
     padding: 2rem 0;
+    font-size: 1.2rem;
+}
+
+.comment li {
+    padding: 0.6rem;
 }
 
 #cmovies .oneMovie > button {
