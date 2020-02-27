@@ -51,7 +51,7 @@ header img {
 .mySlides img {
     width: 100vw;
     /* image box size as % of container, see step 1 */
-    height: 60vh;
+    height: 70vh;
     object-fit: cover;
 }
 
@@ -177,7 +177,6 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-content: center;
     margin: auto;
-    padding: 3rem;
 
 }
 
@@ -186,10 +185,6 @@ main {
     background: transparent;
     /* button text color */
     outline: none;
-    color: #3ca2db;
-    text-transform: uppercase;
-    font-family: "Staatliches", sans-serif;
-    font-size: 2rem;
     border: 1px solid white;
     padding: 2rem 4rem;
     margin: 2rem;
@@ -197,18 +192,28 @@ main {
     display: inline-block;
     overflow: hidden;
     transition: all .5s;
-
-
-
-
 }
 
-.anim:hover {
+h1 {
+     color: #3ca2db;
+    text-transform: uppercase;
+    font-family: "Staatliches", sans-serif;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+.anim:hover{
     box-shadow: 0px 0px 20px 10px ;
     color: #bb9a46;
     cursor: pointer;
     background: #006295;
 
+}
+
+.anim:hover h1{
+    color: #bb9a46;
 }
 
 .bdescription, .bdescription:hover {
@@ -392,16 +397,7 @@ h2 {
     background-color: #000000;
 }
 
-h1 {
-    font-size: 3rem;
-    color: #bb9a46;
-    text-align: center;
-    font-family: 'Staatliches', sans-serif;
-    line-height: 1;
-    margin-top: 2rem;
-    margin-bottom: 20px;
-    font-weight: 400;
-}
+
 
 h3 {
     font-family: 'Staatliches', sans-serif;
@@ -449,11 +445,20 @@ aside a {
 }
 
 .footer {
-    background-color: #1C1C1C;
+    background-color: #fff;
     display: grid;
+    color: black;
     width: 100vw;
     padding: 1rem;
 
+}
+
+.footer h3{
+    font-size: 2.5rem;
+    line-height: 0.1;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 .columns {
@@ -548,6 +553,34 @@ aside a {
     }
 */
 
+    .anim {
+        padding: 1rem 3rem;
+        margin: 2rem;
+
+    }
+
+
+    .topnav a {
+    color: #bb9a46;
+    text-align: center;
+    font-family: "Staatliches";
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 2em;
+    transition: all .5s;
+}
+
+.topnav > img {
+    height: 70px;
+    width: auto;
+    position: absolute;
+    left: 0;
+}
+
+    h1 {
+        font-size: 2rem;
+    }
+
     .bottom-left {
         font-size: 2rem;
         bottom: 30%;
@@ -583,7 +616,7 @@ aside a {
 
     .buttons {
 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
 
 }
@@ -621,9 +654,7 @@ main {
         font-size: 1.5rem;
         bottom: 30%;
     }
-      .anim {
-        padding: 1rem 2rem;
-    }
+
     .bdescription {
         font-size: 1rem;
     }
@@ -666,10 +697,6 @@ main {
 
     .aboutus {
         width: 50%;
-    }
-
-    h1 {
-        font-size: 2.5rem;
     }
 
 

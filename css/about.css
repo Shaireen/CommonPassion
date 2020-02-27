@@ -76,6 +76,7 @@ li {
 
 .topnav > img {
     height: 90px;
+    padding: 2px;
     width: auto;
     position: absolute;
     left: 0;
@@ -150,7 +151,7 @@ main {
     grid-area: maincontent;
     width: 60vw;
     display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(700px, 1fr));
 }
 
 .textcontent {
@@ -181,9 +182,9 @@ main {
 
 
 .bestmovies img {
-    max-width: 100%;
+    width: 100%;
     justify-content: center;
-    padding: 1rem 2rem;
+    padding: 0.5rem;
     margin: auto;
 }
 
@@ -302,7 +303,7 @@ h3 {
 
 }
 
-.oneMovie {
+.oneMovie, .oneMovie2 {
     -webkit-perspective: 800px;
     -moz-perspective: 800px;
     -o-perspective: 800px;
@@ -348,16 +349,16 @@ h3 {
     transform: rotateY(180deg);
 }
 
-.oneMovie:hover .card {
+.oneMovie:hover .card, .oneMovie2:hover .card {
 
     transform: rotateY(-180deg);
 }
 
-.oneMovie:hover {
+.oneMovie:hover, .oneMovie2:hover {
     box-shadow: 0px 0px 20px 10px #bb9a46;
 }
 
-}
+
 
 .card.flipped {
     -webkit-transform: rotateY(-180deg);
@@ -466,6 +467,15 @@ textarea {
     padding: 1rem;
 
 
+}
+
+.footer h3{
+    font-size: 2.5rem;
+    line-height: 0.1;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #bb9a46;
+    font-weight: 500;
 }
 
 .columns {

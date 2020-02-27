@@ -9,7 +9,7 @@ function handleData(data) {
     console.log(myData);
 
      cMovies = myData.filter(function (movie) {
-        return movie.gsx$topmovie.$t === "TRUE";
+        return movie.gsx$topmovieabout.$t === "TRUE";
     });
 
     cMovies.forEach(showCmovies)

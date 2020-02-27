@@ -39,6 +39,7 @@ function showMovies(movie) {
 
 
     const year = movie.gsx$year.$t;
+    const age = movie.gsx$agerating.$t;
 
     const template = document.querySelector("#allmovies").content;
     clone = template.cloneNode(true);
@@ -80,6 +81,8 @@ function showMovies(movie) {
     clone.querySelector(".card .year span").textContent = movie.gsx$year.$t;
     clone.querySelector(".front h3").textContent = movie.gsx$name.$t;
     clone.querySelector(".back .time span").textContent = movie.gsx$runtime.$t;
+    clone.querySelector(".age span").textContent = movie.gsx$agerating.$t;
+    clone.querySelector(".description span").textContent = movie.gsx$description.$t;
     clone.querySelector(".imgplace").innerHTML = "<img src=../images/databaseimg/" + movie.gsx$photo.$t + ">";
 
 clone.querySelector(".anim").addEventListener("click", flipCard);
@@ -95,7 +98,7 @@ clone.querySelector(".anim").addEventListener("click", flipCard);
     document.querySelector(".maincontent").appendChild(clone);
 
     art.classList.add(year);
-
+    art.classList.add(age);
 
 
 
@@ -114,6 +117,23 @@ document.querySelectorAll('.genres button').forEach(button => {
 function filterByGenre(genre) {
     document.querySelectorAll(".oneMovie").forEach(oneMovie => {
         if (oneMovie.classList.contains(genre)) {
+            oneMovie.classList.remove('hide')
+        } else {
+            oneMovie.classList.add('hide')
+        }
+    })
+}
+
+document.querySelectorAll('.agefilter button').forEach(button => {
+    button.addEventListener('click', function () {
+        //console.log(button.dataset.filter)
+        filterByAge(button.dataset.filter)
+    })
+})
+
+function filterByAge(age) {
+    document.querySelectorAll(".oneMovie").forEach(oneMovie => {
+        if (oneMovie.classList.contains(age)) {
             oneMovie.classList.remove('hide')
         } else {
             oneMovie.classList.add('hide')

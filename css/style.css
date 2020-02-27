@@ -46,6 +46,10 @@ li {
     list-style: none;
 }
 
+ul {
+    padding-left: 0;
+}
+
 
 .topnav {
     background-color: #000;
@@ -115,7 +119,9 @@ aside a:hover {
     text-underline-position: under;
 }
 
-
+.imgplace {
+    margin: auto;
+}
 
 .title {
     grid-area: title;
@@ -137,14 +143,15 @@ main {
 }
 
 .maincontent img, .movies img {
-    max-width: 100%;
+    width: 100%;
     justify-content: center;
     padding-top: 15px;
     padding-bottom: 15px;
+    margin: auto;
 }
 
 .titlewrap {
-
+ margin: auto;
  padding-top: 2rem;
 
 }
@@ -183,7 +190,10 @@ main {
 }
 
 
-
+.sorting .title {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
 
 .sidebar {
     font-size: 20px;
@@ -265,6 +275,7 @@ h3 {
     background: transparent;
     color: white;
     padding: 0.4rem 0.7rem;
+    font-size: 1.1rem;
     font-family: classico-urw, sans-serif;
     margin: 0.2rem;
     font-weight: 700;
@@ -282,17 +293,17 @@ h3 {
 
 }
 
-.oneMovie {
-       -webkit-perspective: 800px;
+.oneMovie, .oneMovie2 {
+    -webkit-perspective: 800px;
     -moz-perspective: 800px;
     -o-perspective: 800px;
     perspective: 800px;
 }
 
 .card {
-  display: grid;
-  grid-template: 1fr / 1fr;
-  grid-template-areas: "frontAndBack";
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
     -webkit-transition: -webkit-transform 1s;
     -moz-transition: -moz-transform 1s;
     -o-transition: -o-transform 1s;
@@ -306,43 +317,44 @@ h3 {
 
 
 .card div {
-      -webkit-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
 .front {
-  grid-area: frontAndBack;
+    grid-area: frontAndBack;
 }
 
 .back {
-  grid-area: frontAndBack;
-     -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
+    grid-area: frontAndBack;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-.oneMovie:hover .card{
+.oneMovie:hover .card, .oneMovie2:hover .card {
 
-  transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 }
 
-.oneMovie:hover {
-    box-shadow: 0px 0px 20px 10px  #bb9a46;
+.oneMovie:hover, .oneMovie2:hover {
+    box-shadow: 0px 0px 20px 10px #bb9a46;
 }
 
-}
+
+
 .card.flipped {
-    -webkit-transform: rotateY(-180deg );
-    -moz-transform: rotateY(-180deg );
-    -o-transform: rotateY(-180deg );
-    transform: rotateY(-180deg );
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 }
 
 
@@ -356,7 +368,6 @@ p span {
 
 
 .reviews-container {
-    padding: 1rem;
     margin: 4rem 0;
     width: 100vw;
     background: black;
@@ -392,7 +403,7 @@ width: 38em;
 
 .comment {
     margin: auto;
-    padding: 2rem 0;
+    padding: 2rem;
     font-size: 1.2rem;
 }
 
@@ -446,13 +457,21 @@ textarea {
 }
 
 .footer {
-    grid-area: footer;
-    background-color: #1C1C1C;
+    background-color: #fff;
     display: grid;
+    color: black;
     width: 100vw;
     padding: 1rem;
 
+}
 
+.footer h3{
+    font-size: 2.5rem;
+    line-height: 0.1;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #bb9a46;
+    font-weight: 500;
 }
 
 .columns {
@@ -526,6 +545,18 @@ textarea {
     .topnav a {
         padding: 20px 20px;
     }
+    .critics .comment {
+        width: 90vw;
+        padding: 1rem;
+    }
+    .movies {
+        width: 90vw;
+    }
+
+    .reviews-container .comment {
+        padding: 1rem;
+
+    }
 }
 
 
@@ -548,14 +579,26 @@ main {
     }
     .maincontent {
         margin: auto;
-        width: 85vw;
+        width: 90vw;
          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
     }
 
+     h1 {
+        font-size: 2.5rem;
+    }
+
+     .critics .comment {
+        width: 90vw;
+        padding: 1rem;
+    }
+    .movies {
+        width: 90vw;
+    }
     .titlewrap {
         padding: 1rem;
-        max-width: 90vw;
+        width: 100vw;
+
     }
 
 
