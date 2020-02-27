@@ -83,6 +83,7 @@ ul {
     width: auto;
     position: absolute;
     left: 0;
+    padding:
 }
 
 
@@ -91,7 +92,7 @@ ul {
     text-decoration: underline;
     text-decoration-color: white;
     text-underline-position: under;
-    color: #006295;
+    color: #3ca2db;
 
 }
 
@@ -142,7 +143,8 @@ main {
 
 }
 
-.maincontent img, .movies img {
+.maincontent img,
+.movies img {
     width: 100%;
     justify-content: center;
     padding-top: 15px;
@@ -151,14 +153,15 @@ main {
 }
 
 .titlewrap {
- margin: auto;
- padding-top: 2rem;
+    margin: auto;
+    padding-top: 2rem;
 
 }
 
 .titlewrap > h1 {
     text-align: left;
 }
+
 .maincontent {
     grid-area: maincontent;
     width: 65vw;
@@ -230,6 +233,7 @@ h1 {
 .sorting > h1 {
     text-align: left;
 }
+
 h3 {
     font-family: 'Staatliches', sans-serif;
     font-weight: 700;
@@ -238,7 +242,8 @@ h3 {
     color: #af251b;
 }
 
-.anim, .add {
+.anim,
+.add {
     background: transparent;
     /* button text color */
     outline: none;
@@ -258,11 +263,12 @@ h3 {
 
 }
 
-.anim:hover, .add:hover {
-    box-shadow: 0px 0px 20px 10px  #bb9a46;
+.anim:hover,
+.add:hover {
+    box-shadow: 0px 0px 20px 10px #bb9a46;
     color: #bb9a46;
     cursor: pointer;
-    background: #3ca2db;
+    background: #006295;
 
 }
 
@@ -270,6 +276,7 @@ h3 {
     display: block;
     margin-left: 0;
 }
+
 .sorting button {
     border: 1px solid white;
     background: transparent;
@@ -289,11 +296,12 @@ h3 {
 }
 
 .sorting button:focus {
-     box-shadow: 0px 0px 5px 5px #bb9a46;
+    box-shadow: 0px 0px 5px 5px #bb9a46;
 
 }
 
-.oneMovie, .oneMovie2 {
+.oneMovie,
+.oneMovie2 {
     -webkit-perspective: 800px;
     -moz-perspective: 800px;
     -o-perspective: 800px;
@@ -339,12 +347,14 @@ h3 {
     transform: rotateY(180deg);
 }
 
-.oneMovie:hover .card, .oneMovie2:hover .card {
+.oneMovie:hover .card,
+.oneMovie2:hover .card {
 
     transform: rotateY(-180deg);
 }
 
-.oneMovie:hover, .oneMovie2:hover {
+.oneMovie:hover,
+.oneMovie2:hover {
     box-shadow: 0px 0px 20px 10px #bb9a46;
 }
 
@@ -385,15 +395,26 @@ p span {
 
 
 }
+
 .critics .comment {
-width: 38em;
+    width: 38em;
 }
+
 .critics h1 {
     line-height: 1;
 }
 
+.revlink a {
+    color: black;
+    text-decoration: underline;
+}
+
+.revlink a:hover {
+    color: #af251b;
+}
+
 .movies {
-      display: grid;
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
     margin: auto;
@@ -414,8 +435,9 @@ width: 38em;
 #cmovies .oneMovie > button {
     border: 1px solid black;
 }
+
 .reviews {
-   display: grid;
+    display: grid;
     grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
 
 }
@@ -425,6 +447,7 @@ width: 38em;
     color: black;
     border-radius: 50px;
 }
+
 .reviews > p {
     margin: auto;
 }
@@ -465,7 +488,7 @@ textarea {
 
 }
 
-.footer h3{
+.footer h3 {
     font-size: 2.5rem;
     line-height: 0.1;
     margin-top: 1.5rem;
@@ -478,11 +501,30 @@ textarea {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin: auto;
+      grid-auto-flow: column;
 }
 
 .column {
     padding: 1rem;
 }
+ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+.column ul li, .column ul li a {
+    padding: 0.6rem;
+    text-decoration: underline;
+    list-style: circle;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.column ul li:hover, .column ul li a:hover {
+     color: #af251b;
+}
+
 /*@media only screen and (min-width:1400px) {
     body {
         display: grid;
@@ -532,7 +574,7 @@ textarea {
 
 
 */
-@media only screen and (max-width: 950px) and (min-width: 700px){
+@media only screen and (max-width: 950px) and (min-width: 700px) {
     .sorting {
         width: 45vw;
     }
@@ -545,10 +587,12 @@ textarea {
     .topnav a {
         padding: 20px 20px;
     }
+
     .critics .comment {
         width: 90vw;
         padding: 1rem;
     }
+
     .movies {
         width: 90vw;
     }
@@ -561,40 +605,76 @@ textarea {
 
 
 @media only screen and (max-width: 700px) {
-main {
+    main {
 
-    grid-template-areas:
+        grid-template-areas:
 
-        "filter filter filter filter"
-         "title title title title"
-        "maincontent maincontent maincontent maincontent"
-        "maincontent maincontent maincontent maincontent";
+            "filter filter filter filter"
+            "title title title title"
+            "maincontent maincontent maincontent maincontent"
+            "maincontent maincontent maincontent maincontent";
 
         padding: 0;
-}
+    }
 
     .sorting {
         width: 90vw;
         margin: auto;
     }
+
     .maincontent {
         margin: auto;
         width: 90vw;
-         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
     }
 
-     h1 {
+        .columns {
+
+    grid-auto-flow: row;
+}
+
+    .column {
+        display: grid;
+        padding: 1rem 0;
+        grid-template-columns: repeat(auto-fill);
+        grid-auto-flow: column;
+        width: 95%;
+        justify-items: center;
+
+    }
+
+
+    .topnav a {
+        color: #bb9a46;
+        text-align: center;
+        font-family: "Staatliches";
+        padding: 15px 15px;
+        text-decoration: none;
+        font-size: 2em;
+        transition: all .5s;
+    }
+
+    .topnav > img {
+        height: 70px;
+        width: auto;
+        position: absolute;
+        left: 0;
+    }
+
+    h1 {
         font-size: 2.5rem;
     }
 
-     .critics .comment {
+    .critics .comment {
         width: 90vw;
         padding: 1rem;
     }
+
     .movies {
         width: 90vw;
     }
+
     .titlewrap {
         padding: 1rem;
         width: 100vw;
@@ -658,4 +738,3 @@ main {
 
 }
 */
-
